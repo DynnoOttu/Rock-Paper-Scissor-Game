@@ -6,14 +6,20 @@ import Home from "./Components/home";
 import Play from "./Components/play";
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [score, setScore] = useState(0);
+  const [myChoice, setMyChoice] = useState("");
 
   return (
     <>
-      <Header />
+      <Header score={score} />
       <Routes>
-        <Route path={"/"} element={<Home />} />
-        <Route path={"/game"} element={<Play />} />
+        <Route path={"/"} element={<Home setMyChoice={setMyChoice} />} />
+        <Route
+          path={"/game"}
+          element={
+            <Play myChoice={myChoice} setScore={setScore} score={score} />
+          }
+        />
       </Routes>
     </>
   );

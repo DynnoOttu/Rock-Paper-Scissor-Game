@@ -1,7 +1,12 @@
 import React from "react";
 
-const Header = () => {
-  return <div>Score: 0</div>;
+const Header = ({ score }) => {
+  return (
+    <>
+      <div>Score: {score}</div>
+      <div>---------------------------------</div>
+    </>
+  );
 };
 
 export default Header;
