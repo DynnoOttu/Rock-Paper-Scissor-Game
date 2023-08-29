@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-// import Header from "./Components/header";
+import Header from "./Components/Header";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Components/home";
-import Play from "./Components/play";
+import Home from "./Components/Home";
+import Play from "./Components/Play";
 
 const App = () => {
   const [score, setScore] = useState(0);
@@ -11,6 +11,7 @@ const App = () => {
 
   return (
     <>
+      <Header score={score} />
       <Routes>
         <Route path={"/"} element={<Home setMyChoice={setMyChoice} />} />
         <Route
