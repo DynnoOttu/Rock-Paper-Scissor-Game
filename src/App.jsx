@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./Components/header";
+// import Header from "./Components/header";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Components/home";
 import Play from "./Components/play";
@@ -10,8 +10,7 @@ const App = () => {
   const [myChoice, setMyChoice] = useState("");
 
   return (
-    <div>
-      <Header score={score} />
+    <>
       <Routes>
         <Route path={"/"} element={<Home setMyChoice={setMyChoice} />} />
         <Route
@@ -21,7 +20,7 @@ const App = () => {
           }
         />
       </Routes>
-    </div>
+    </>
   );
 };
 
