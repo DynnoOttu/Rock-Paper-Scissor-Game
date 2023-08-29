@@ -10,7 +10,7 @@ const App = () => {
   const [myChoice, setMyChoice] = useState("");
 
   return (
-    <>
+    <div>
       <Header score={score} />
       <Routes>
         <Route path={"/"} element={<Home setMyChoice={setMyChoice} />} />
@@ -21,7 +21,7 @@ const App = () => {
           }
         />
       </Routes>
-    </>
+    </div>
   );
 };
 

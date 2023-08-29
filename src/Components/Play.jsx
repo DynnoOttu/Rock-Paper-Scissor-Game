@@ -43,9 +43,21 @@ const Play = ({ myChoice, setScore, score }) => {
 
   return (
     <>
-      <div>Player memilih: {myChoice}</div>
-      <div>Komuter memilih: {computerChoice}</div>
-      <div>{gameResult}</div>
+      <div className="container">
+        <div
+          className="d-flex justify-content-center mb-5 mt-5"
+          style={{ fontSize: "40px" }}
+        >
+          <div style={{ paddingRight: "30px" }}>Kamu memilih: {myChoice}</div>
+          <div>Komuter memilih: {computerChoice}</div>
+        </div>
+        <div
+          className="d-flex justify-content-center"
+          style={{ fontSize: "20px" }}
+        >
+          Hasil: {gameResult}!!!
+        </div>
+      </div>
     </>
   );
 };
